@@ -404,7 +404,7 @@
                 q.resolve(res.data);
             });
             return q.promise;
-        };
+        }
 
         o.deleteCommunity = function(id) {
             // console.log(id.id)
@@ -413,7 +413,7 @@
                 q.resolve();
             });
             return q.promise;
-        };
+        }
 
         return o;
     }
