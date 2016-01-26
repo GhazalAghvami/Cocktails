@@ -12,7 +12,7 @@ htmlmin = require('gulp-htmlmin');
 
 
 gulp.task('styles', function() {
-  return sass('./public/css/**/*', {style: 'expanded'})
+  return sass('./public/scss/**/*', {style: 'expanded'})
   .pipe(autoprefixer("last 2 versions"))
   .pipe(gulp.dest('./dist/css'))
   .pipe(rename({suffix: '.min'}))
@@ -22,7 +22,7 @@ gulp.task('styles', function() {
 });
 
 gulp.task('minify', function() {
-  return gulp.src('public/views/*.html')
+  return gulp.src('public/templates/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('dist/views'));
 });
