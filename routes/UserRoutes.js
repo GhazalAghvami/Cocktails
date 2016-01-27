@@ -23,7 +23,6 @@ router.post('/login', function(req, res, next) {
   })(req, res, next);
 });
 
-
 router.get('/profile/:id', function(req, res, next){
   var sendBack ={};
   Community.find({createdBy:req.params.id})
