@@ -5,7 +5,7 @@ var Community = mongoose.model('Community');
 var jwt = require('express-jwt');
 var auth = jwt({
   userProperty: "payload", //req.payload._id in the Route
-  secret: "CoderCamps" //matches the secret in model
+  secret: process.env.SECRET //matches the secret in model
    });
 
 router.param('id', function(req, res, next, id) {

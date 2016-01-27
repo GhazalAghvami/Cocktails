@@ -27,7 +27,7 @@ UserSchema.methods.createToken = function() {
    _id: this._id,
    username: this.username,
 
- }, "CoderCamps"); //Add Passcode here
+ }, process.env.SECRET); //Add Passcode here
 };
 
 mongoose.model('User', UserSchema);

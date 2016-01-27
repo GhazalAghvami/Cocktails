@@ -5,7 +5,7 @@ var Recipe = mongoose.model('Recipe');
 var jwt = require('express-jwt');
 var auth = jwt({
   userProperty: "payload", //req.payload._id in the Route
-  secret: "CoderCamps" //matches the secret in model
+secret: process.env.SECRET  //matches the secret in model
    });
 
 router.post('/:comID', auth, function(req, res, next) {
