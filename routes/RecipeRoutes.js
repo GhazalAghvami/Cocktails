@@ -20,16 +20,7 @@ router.post('/:comID', auth, function(req, res, next) {
   });
 });
 
-// router.get('/', function(req, res, next) {
-//   Recipe
-//   .find({})
-//   // .select('topic createdBy')
-//   // .populate('createdBy', 'username')
-//   .exec(function(err, result) {
-//     if(err) return next(err);
-//     res.send(result);
-//   });
-// });
+
 
 router.delete('/:id', auth, function(req, res, next) {
   Recipe.remove({_id: req.params.id}, function(err, result) {
